@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<h2>VIEW CONSOLE</h2>
+    <script>
+        var arr = [1,4,5,8,7,9,6,6]
+
+        function lastElements(arr,n)
+        {
+            if (arr.length < n)
+                return arr;
+           
+            return arr.slice(arr.length - n);
+            
+        }
+        console.log(lastElements(arr, 3));//last three elements
+    </script>
+</body>
+</html>

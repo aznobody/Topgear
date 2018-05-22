@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #prev,#next
+        { width:200px;
+          height:40px;
+            font-size:20px;
+           margin-right:237px;
+        }
+    </style>
+</head>
+<body onload="loadFirst()">
+    <div >
+        <img id="image" src="images/Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg" height="400" width="640" />
+
+    </div>
+    <button id="prev" onclick="showPrev()">Previous</button>
+    
+    <button id="next" onclick="showNext()">Next</button>
+    <script>
+        var currentIndex=0;
+        var imageURl = ["images/animals_frogs_green_contrast_colors_nature_1920x1200.jpg",
+                       "images/Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg",
+                       "images/fruit_oranges_1920x1200.jpg",
+                       "images/nature_trees_forests_green_1920x1080.jpg",
+                       "images/tA_1920x1080.jpg",
+                       "images/tunnel_green_rails_road_garden_1920x1200.jpg"]
+        var image = document.getElementById("image");
+       
+        function loadFirst()
+        {
+            
+            image.src = imageURl[0];
+            checkIndex();
+        }
+
+        function showPrev()
+        {
+            currentIndex -= 1;
+            image.src = imageURl[currentIndex];
+            checkIndex();
+        }
+        function showNext()
+        {
+            currentIndex += 1;
+            image.src = imageURl[currentIndex];
+            checkIndex();
+        }
+        function checkIndex()
+        {  
+            if(currentIndex==0)
+            {
+                document.getElementById("prev").style.visibility = 'hidden';
+                
+            }
+            else if (currentIndex == 5) {
+                document.getElementById("next").style.visibility = 'hidden';
+            }
+            else
+            {
+                document.getElementById("prev").style.visibility = 'visible';
+                document.getElementById("next").style.visibility = 'visible';
+            }
+
+            
+        }
+                     
+
+            
+    </script>
+</body>
+</html>

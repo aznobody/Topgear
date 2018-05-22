@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <input type="submit">
+    <script>
+        var drop = document.getElementById("browsers");
+        var count = drop.childElementCount;
+        var values = "";
+        for(var i=0;i<count;i++)
+        {
+            values+=(drop.children[i].value)+"\n";
+        }
+
+        alert("count= " + count + "\n" + values);
+    </script>
+
+</body>
+</html>

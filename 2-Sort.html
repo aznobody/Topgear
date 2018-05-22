@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="BeforeSort"></div>
+<script>
+    var Object1 = {
+        id: 12,
+        name:"twelve"
+    };
+    var Object2 = {
+        id: 15,
+        name: "fifteen"
+    };
+    var Object3 = {
+        id: 10,
+        name: "ten"
+    };
+    var Object4 = {
+        id: 2,
+        name: "two"
+    };
+    var Object5 = {
+        id: 16,
+        name: "sixteen"
+    };
+
+    var newArray = [Object1, Object2, Object3, Object4, Object5];
+    
+    var beforeSort = "Before sort: </br>";
+    
+    for (var i = 0; i < newArray.length; i++)
+    {
+        beforeSort += "id= " + newArray[i].id + "  value=" + newArray[i].name+ "</br>";
+    }
+    document.writeln(beforeSort);
+
+
+    function compare(a, b)
+    {
+        if (a.id < b.id) return -1;
+        if (a.id > b.id) return 1;
+
+        return 0;
+    }
+    newArray.sort(compare);
+    var afterSort = "After sort:</br>";
+    for (var i = 0; i < newArray.length; i++) {
+        afterSort += "id= " + newArray[i].id + "value=" + newArray[i].name + "</br>";;
+    }
+    document.writeln(afterSort);
+
+</script>
+</body>
+</html>

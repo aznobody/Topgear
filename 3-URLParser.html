@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>VIEW CONSOLE</h2>
+    <script>
+        var parser = document.createElement('a');
+        parser.innerHTML = "link";
+        parser.href = "http://example.com:3000/pathname/?search=test#hash";
+
+        console.log("protocol: " + parser.protocol + "\nhostname: " + parser.hostname + "\nport: " + parser.port+
+            "\npathname: " + parser.pathname+"\nsearch: " + parser.search+"\nhash: " + 
+            parser.hash+"\nhost: " + parser.host);
+
+    </script>
+</body>
+</html>

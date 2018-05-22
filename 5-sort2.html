@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<h2>VIEW CONSOLE</h2>
+    <script>
+        //BUBBLE SORT
+        var a = [33, 103, 3, 726, 200, 984, 198, 764, 9];
+
+        function bubbleSort(a) {
+            var swapped;
+            do {
+                swapped = false;
+                for (var i = 0; i < a.length - 1; i++) {
+                    if (a[i] > a[i + 1]) {
+                        var temp = a[i];
+                        a[i] = a[i + 1];
+                        a[i + 1] = temp;
+                        swapped = true;
+                    }
+                }
+            } while (swapped);
+        }
+
+        bubbleSort(a);
+        console.log("BUBBLE SORT RESULT:"+a);
+
+
+       //SELECTION SORT
+        var selectionSort = function (array) {
+            for (var i = 0; i < array.length; i++) {
+                //set min to the current iteration of i
+                var min = i;
+                for (var j = i + 1; j < array.length; j++) {
+                    if (array[j] < array[min]) {
+                        min = j;
+                    }
+                }
+                var temp = array[i];
+                array[i] = array[min];
+                array[min] = temp;
+            }
+            return array;
+        };
+        var array = [3, 2, 10, 1]
+        console.log('selectionSort should return [1,2,3,10]-->', selectionSort(array));
+    </script>
+
+</body>
+</html>

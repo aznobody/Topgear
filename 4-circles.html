@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="draw()">
+
+    <canvas id="circle" width="750" height="150"></canvas>
+    <script>
+        function draw() {
+            var canvas = document.getElementById('circle');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                var X = canvas.width / 10;
+                var Y = canvas.height / 2;
+                var R = 75;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#FF0000';
+                ctx.fillStyle = 'rgba(255,0,0,1)';
+                ctx.fill();
+
+                //2nd circle
+                 X = canvas.width / 10+150;
+                 Y = canvas.height / 2;
+                 R = 75;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#FF0000';
+                ctx.fillStyle = 'rgba(255,0,0,0.8)';
+                ctx.fill();
+
+                //3rd circle
+                X = canvas.width / 10 + 300;
+                Y = canvas.height / 2;
+                R = 75;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#FF0000';
+                ctx.fillStyle = 'rgba(255,0,0,0.6)';
+                ctx.fill();
+
+                //4th circle
+                X = canvas.width / 10 + 450;
+                Y = canvas.height / 2;
+                R = 75;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#FF0000';
+                ctx.fillStyle = 'rgba(255,0,0,0.4)';
+                ctx.fill();
+
+                //5th circle
+                X = canvas.width / 10 + 600;
+                Y = canvas.height / 2;
+                R = 75;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#FF0000';
+                ctx.fillStyle = 'rgba(255,0,0,0.2)';
+                ctx.fill();
+            }
+        }
+
+    </script>
+</body>
+</html>

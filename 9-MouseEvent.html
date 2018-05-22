@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="loadimage()">
+    <div>
+        <img onmouseover="change1()" onmouseout="original1()" id="img1"  height="400" width="640" />
+        <img onmouseover="change2()" onmouseout="original2()" id="img2" height="400" width="640" />
+        <img onmouseover="change3()" onmouseout="original3()"id="img3" height="400" width="640" />
+    </div>
+    <script>
+        var imageURl = ["images/animals_frogs_green_contrast_colors_nature_1920x1200.jpg",
+                       "images/Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg",
+                       "images/fruit_oranges_1920x1200.jpg",
+                       "images/nature_trees_forests_green_1920x1080.jpg",
+                       "images/tA_1920x1080.jpg",
+                       "images/tunnel_green_rails_road_garden_1920x1200.jpg"]
+        var img1 = document.getElementById("img1");
+        var img2 = document.getElementById("img2");
+        var img3 = document.getElementById("img3");
+
+        function change1()
+        {
+            img1.src = imageURl[1];  
+        }
+        function original1()
+        {
+            img1.src = imageURl[0];
+        }
+
+        function change2() {
+            img2.src = imageURl[2];
+        }
+        function original2() {
+            img2.src = imageURl[3];
+        }
+
+        function change3() {
+            img3.src = imageURl[4];
+        }
+        function original3() {
+            img3.src = imageURl[5];
+        }
+        function loadimage()
+        {
+            original1();
+            original2();
+            original3();
+        }
+
+    </script>
+</body>
+</html>
